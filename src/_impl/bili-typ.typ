@@ -1,5 +1,9 @@
 /// Typst implementation of Bilibili AVID-BVID conversion
 /// The code is now replaced by more efficient Rust implementation and is thus obsolete. Left here for reference only.
+///
+///
+/// B 站 AVID 和 BVID 互相转换的 Typst 实现。
+/// 由于该部分内容目前已有更高效的 Rust 实现，此处代码已弃用，仅作参考备用目的。
 
 #let key = "fZodR9XQDSUm21yCkr6zBqiveYah8bt4xsWpHnJE7jL5VG3guMTKNPAwcF"
 #let key-inv-map = (

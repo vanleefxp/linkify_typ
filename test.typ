@@ -8,16 +8,16 @@
 
 #bili(11, format: "bv") \
 #bili(1145, format: auto) \
-#bili("14g4y1574R", format: "av", prefix: false)
+#B站("14g4y1574R", format: "av", prefix: false)
 
 #twitter("anime_oshinoko")\
 #link(ln.twitter("anime_oshinoko", 1663915842164146177))
 
 #isbn("978-7513342919", dash: false)
 
-#moegirl("鸡你太美") \
+#萌百("鸡你太美") \
 #moegirl("二次元禁断综合征") \
 #moegirl("孤独摇滚！")
 
 #wiki("Maslow's hiearchy of needs") \
-#wiki("Charles Baudelaire", lang: "fr")
+#维基("Charles Baudelaire", lang: "fr")

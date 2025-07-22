@@ -86,7 +86,7 @@
 
 #let wiki(title, lang: "en") = {
   let url = url_.wiki(title, lang: lang)
-  let display-content = with-smartquote(title.replace("_", " "))
+  let display-content = text(with-smartquote(title.replace("_", " ")), lang: lang)
   link(url, display-content)
 }
 
