@@ -154,12 +154,12 @@
 ) = {
   let pos-args = args.pos()
   if pos-args.len() == 1 {
-    let (userid,) = pos-args
-    assert.eq(type(userid), str)
+    let (user-id,) = pos-args
+    assert.eq(type(user-id), str)
     "https://x.com/" + user-id
   } else if pos-args.len() == 2 {
     let (user-id, post-id) = pos-args
-    assert.eq(type(userid), str)
+    assert.eq(type(user-id), str)
     assert.eq(type(post-id), int)
     "https://x.com/" + user-id + "/status/" + str(post-id)
   } else {

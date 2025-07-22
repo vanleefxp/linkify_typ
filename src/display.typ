@@ -3,6 +3,7 @@
 /// If you want to customize the display content instead of using the default content ID, you can use the `linkify.url` sub-libray to generate string URLs and put it in a `link` element with custom content instead.
 
 #import "_impl/display.typ": (
+  url-as-raw,
   bili,
   weixin,
   youtube,

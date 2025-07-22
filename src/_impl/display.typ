@@ -36,7 +36,7 @@
   } else { it }
 }
 
-#let bili(..args, format: "bv", prefix: true) = {
+#let bili(..args, format: auto, prefix: true) = {
   let pos-args = args.pos()
   if pos-args.len() == 1 {
     let (video-id,) = pos-args
