@@ -16,24 +16,25 @@
 ///
 /// - it (content): a `link` element
 /// -> content
-#let url-as-raw(it) = {
-  assert.eq(type(it), content)
-  assert.eq(it.func(), link)
-  if (
-    it.body.func() == text and
-    type(it.dest) == str
-  ) {
-    let src = it.dest
-    for prefix in url-prefixes {
-      if src.starts-with(prefix + ":") {
-        src = src.slice(prefix.len() + 1)
-        break
+#let url-as-raw(body) = {
+  show link: it => {
+    if (
+      it.body.func() == text and
+      type(it.dest) == str
+    ) {
+      let src = it.dest
+      for prefix in url-prefixes {
+        if src.starts-with(prefix + ":") {
+          src = src.slice(prefix.len() + 1)
+          break
+        }
       }
-    }
-    if src == it.body.text {
-      link(it.dest, raw(src))
+      if src == it.body.text {
+        link(it.dest, raw(src))
+      } else { it }
     } else { it }
-  } else { it }
+  }
+  body
 }
 
 #let bili(..args, uid: missing, format: auto, prefix: true) = {
