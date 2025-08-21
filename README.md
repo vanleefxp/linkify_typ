@@ -23,7 +23,7 @@ The currently supported platforms include:
     #import "@preview/linkify:0.1.0": url as ln,
     #import linkify.display: *
 
-    #show link: url-as-raw
+    #show: url-as-raw
 
     // URL all displayed as `raw` format, while still clickable
 
@@ -33,7 +33,7 @@ The currently supported platforms include:
 
     // If display content is set otherwise, then it is not affected
 
-    #link("https://www.typst.app/docs")[Typst 帮助文档]
+    #link("https://www.typst.app/docs")[Typst Documentation]
     ```
 
 
@@ -50,10 +50,10 @@ The currently supported platforms include:
     #bili(11, format: "bv") \  // specify to show as BVID
     #bili("14g4y1574R", format: "av", prefix: false) \ // no AV / BV prefix
     #bili(uid: 2) // user ID
-    #bili(uid: 2, "碧诗") // username
+    #bili(uid: 2, "⑨bishi") // username
 
     #link(lu.bili(11))[B 站最早的 MV] \ // string URL with customized text
-    #link(lu.bili(uid: 2))[B 站站长]
+    #link(lu.bili(uid: 2))[Founder of Bilibili]
 
     // Twitter / X
 

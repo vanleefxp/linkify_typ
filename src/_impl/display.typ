@@ -9,7 +9,7 @@
 /// This function is intended to be used in a  `show` rule and will not affect `link` elements that have alternative content specified.
 ///
 /// ```example
-/// #show link: url-as-raw
+/// #show: url-as-raw
 /// #link("https://typst.app/docs") and            // This will be affected
 /// #link("https://typst.app/docs")[Typst Docs]    // But this will not
 /// ```
@@ -92,15 +92,41 @@
   }
 }
 
-#let wiki(title, lang: "en") = {
-  let url = url_.wiki(title, lang: lang)
-  let display-content = text(with-smartquote(title.replace("_", " ")), lang: lang)
+#let wiki(
+  title,
+  lang: "en",
+  section: none,
+  delimiter: [ #sym.section],
+  ..args,
+) = {
+  let pos-args = args.pos()
+  let url = url_.wiki(title, lang: lang, section: section)
+  let display-content = if pos-args.len() > 0 {
+    pos-args.at(0)
+  } else {
+    text(
+      with-smartquote(title.replace("_", " ")) +
+      if section != none {
+        delimiter + with-smartquote(section.replace("_", " "))
+      },
+      lang: lang
+    )
+  }
   link(url, display-content)
 }
 
-#let moegirl(title) = {
-  let url = url_.moegirl(title)
-  let display-content = with-smartquote(title.replace("_", " "))
+#let moegirl(
+  title,
+  section: none,
+  delimiter: [ #sym.section],
+) = {
+  let url = url_.moegirl(title, section: section)
+  let display-content = (
+    with-smartquote(title.replace("_", " ")) +
+    if section != none {
+      delimiter + with-smartquote(section.replace("_", " "))
+    }
+  )
   link(url, display-content)
 }
 

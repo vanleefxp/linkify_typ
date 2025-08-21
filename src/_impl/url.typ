@@ -138,15 +138,29 @@
   isbn-src.at(src)(id.replace("-", ""))
 }
 
-#let wiki(title, lang: "en") = {
+#let wiki(title, lang: "en", section: none) = {
   // ensure a valid language code to prevent injection
   assert(lang.match(regex("^[a-z]{2}$")) != none)
-  "https://" + lang + ".wikipedia.org/wiki/" + url-encode(title)
+  (
+    "https://" + lang + ".wikipedia.org/wiki/" +
+    url-encode(title) +
+    if section != none {
+      assert.eq(type(section), str)
+      "#" + section
+    }
+  )
 }
 
-#let moegirl(title) = {
+#let moegirl(title, section: none) = {
   assert.eq(type(title), str)
-  "https://zh.moegirl.org.cn/" + url-encode(title)
+  (
+    "https://zh.moegirl.org.cn/" +
+    url-encode(title) +
+    if section != none {
+      assert.eq(type(section), str)
+      "#" + section
+    }
+  )
 }
 
 #let twitter(
