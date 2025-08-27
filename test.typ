@@ -1,7 +1,7 @@
 #import "./src/lib.typ" as linkify: url as lu, // `linkify.url` 的简写
 #import linkify.display: *
 
-#show link: url-as-raw
+#show: url-as-raw
 
 // URL 全部显示为 `raw` 格式，但仍可点击
 

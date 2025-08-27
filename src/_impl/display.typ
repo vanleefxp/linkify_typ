@@ -14,7 +14,7 @@
 /// #link("https://typst.app/docs")[Typst Docs]    // But this will not
 /// ```
 ///
-/// - it (content): a `link` element
+/// - it (content): the content to apply the `show` rule to
 /// -> content
 #let url-as-raw(body) = {
   show link: it => {

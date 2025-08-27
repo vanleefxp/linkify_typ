@@ -76,6 +76,12 @@ The currently supported platforms include:
     #wiki("Charles Baudelaire", lang: "fr") // language can be specified
     ```
 
+## Change log
+
+### 0.1.1
+
+* Added support to link to a specific chapter for Wikipedia and MoeGirl links.
+* `url-as-raw` can now be used as `show: url-as-raw`, no need to say `show link: url-as-raw` any more.
 
 ---
 
@@ -156,3 +162,10 @@ The currently supported platforms include:
     #wiki("Maslow's hiearchy of needs") \ // 引号显示时自动转化为 `smartquote`
     #wiki("Charles Baudelaire", lang: "fr") // 可指定条目语言
     ```
+
+## 更新记录
+
+### 0.1.1
+
+* 维基百科和萌娘百科链接新增章节定位功能
+* 应用 `url-as-raw` 规则现在可直接书写 `show: url-as-raw`, 无需再使用 `show link: url-as-raw`
