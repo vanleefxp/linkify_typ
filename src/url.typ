@@ -13,22 +13,22 @@
 ///
 /// 包括小红书在内的某些平台，其生成的分享链接会包含用户的个人信息，有隐私泄露的风险，故目前尚不提供这些平台内容的链接生成。同时也请注意避免在公开发布的文档中使用这些可能泄露个人信息的分享链接。若未来发现有办法对这些分享链接中的个人信息进行脱敏处理，我可以考虑加入相关的函数。
 
+// This is a program-generated file. Do not edit it directly.
 #import "_impl/url.typ": (
   bili,
   weixin,
   zhihu,
   youtube,
+  isbn,
   wiki,
   moegirl,
   twitter,
-  isbn,
+  B站,
+  微信,
+  知乎,
+  油管,
+  维基,
+  萌百,
+  推特,
+  X,
 )
-
-#let B站 = bili
-#let 微信 = weixin
-#let 知乎 = zhihu
-#let 油管 = youtube
-#let 维基 = wiki
-#let 萌百 = moegirl
-#let 推特 = twitter
-#let X = twitter

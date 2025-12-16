@@ -15,22 +15,21 @@
 ///
 /// 如果希望自定义显示内容，而不是使用默认的内容 ID, 可以使用 `linkify.url` 子模块生成字符串链接，结合 `link` 元素显示自定义内容。
 
+// This is a program-generated file. Do not edit it directly.
 #import "_impl/display.typ": (
   url-as-raw,
   bili,
-  weixin,
   youtube,
+  weixin,
   wiki,
   moegirl,
   twitter,
   isbn,
+  B站,
+  微信,
+  油管,
+  维基,
+  萌百,
+  推特,
+  X,
 )
-
-#let B站 = bili
-#let 微信 = weixin
-#let 油管 = youtube
-#let 维基 = wiki
-#let 萌百 = moegirl
-#let 推特 = twitter
-#let X = twitter
-

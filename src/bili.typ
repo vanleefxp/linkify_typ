@@ -9,11 +9,11 @@
 /// - AV 号是一个整数，在过去，其随着投稿视频的次序依次增加。BV 号启用后，新视频的 AV 号不再服从此规则。
 /// - BV 号是一个由 10 个数字或大小写字母组成的字符串。其中易混淆字符 `0`, `O`, `I`, `l` 未被使用。
 
+// This is a program-generated file. Do not edit it directly.
 #import "_impl/bili.typ": (
-  av2bv,
-  bv2av,
-  video-id-fmt,
-  validate-bv,
   bv-regex,
+  validate-bv,
+  bv2av,
+  av2bv,
+  video-id-fmt,
 )
-
